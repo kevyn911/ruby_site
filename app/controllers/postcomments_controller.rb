@@ -7,8 +7,8 @@ params[:postcomment][:user_id] = current_user.id
 if @comment.save
 redirect_to photo_path(params[:photo_id])
 else
-    @comment.errors.full_messages.each do |msg|
-        @msg=msg
+	@comment.errors.full_messages.each do |msg|
+		@msg=msg
 end
 flash[:notice] = "#{@msg}"
 redirect_to photo_path(params[:photo_id])

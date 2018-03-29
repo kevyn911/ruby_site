@@ -2,10 +2,10 @@
 <div class="d7"><h1>Вибери свою BMW!</h1></div>
 <div class="cars">
 <% @photos.each do |photo| %>
-    <div class="carelem">
-    <p><%= image_tag(photo.photo_url, :class => "carphoto")%></p>
-    <p class="carname"><b><%= photo.category.name %></b></p>
-    <p><center><%= link_to photo.name,  photo_path(photo.id), :class => "detali"%></center></p>
-    </div>
+	<div class="carelem">
+	<p><%= image_tag(photo.photo_url, :class => "carphoto")%></p>
+	<p class="carname"><b><%= photo.category.name %></b></p>
+	<p><center><%= link_to photo.name,  photo_path(photo.id), :class => "detali"%></center></p>
+	</div>
 <% end %>
 </div>
